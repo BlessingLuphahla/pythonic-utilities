@@ -22,7 +22,7 @@ def create_icons(image_path):
             # Create the directory if it doesn't exist
             os.makedirs(folder, exist_ok=True)
             # Resize the image
-            resized_img = img.resize(size, Image.ANTIALIAS)
+            resized_img = img.resize(size, Image.ADAPTIVE)
             # Save the resized image in the appropriate folder with the correct name
             file_name = os.path.join(folder, 'ic_launcher.png') if 'mipmap' in folder else os.path.join(folder, 'icon.png')
             resized_img.save(file_name)
